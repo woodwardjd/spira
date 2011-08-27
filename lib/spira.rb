@@ -1,6 +1,7 @@
 require 'rdf'
 require 'promise'
 require 'spira/exceptions'
+require 'spira/railtie' if defined?(Rails)
 
 ##
 # Spira is a framework for building projections of RDF data into Ruby classes.

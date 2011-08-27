@@ -1,0 +1,18 @@
+defaults: &defaults
+  adaptor: rdf-agraph
+  host: 127.0.0.1
+  port: 10035
+  username: web
+  password: web
+
+development:
+  <<: *defaults
+  repository: repositories/<%= repository_name || app_name %>_development
+
+test:
+  <<: *defaults
+  repository: repositories/<%= repository_name || app_name %>_test
+
+production:
+  <<: *defaults
+  repository: repositories/<%= repository_name || app_name %>
